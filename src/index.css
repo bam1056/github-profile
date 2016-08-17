@@ -2,9 +2,104 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  min-height: 100vh;
 }
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
+}
+html {
+  height: 100vh;
+
+}
+.Repos {
+  display:flex;
+  flex-wrap: wrap;
+  margin-left: 50px;
+}
+.Repos li{
+  margin-right: 100px;
+}
 .Avatar img {
   max-height: 200px;
   max-width: 200px;
+  margin: 25px;
+  border-radius: 10px;
+}
+.container{
+  display: flex;
+  position: absolute;
+  margin-top: 100px;
+}
+.userInfo {
+  width: 10%;
+  text-align: center;
+  margin-left: 50px;
+}
+.userInfo ul {
+  text-align: left;
+}
+
+.Followers li {
+  background-color: white;
+  margin-top: 10px;
+  margin-right: 700px;
+  display: block;
+}
+.RepoList h3 {
+  text-align: left;
+  border-bottom: 3px solid gray;
+  margin-left: 95px;
+}
+.RepoList {
+  text-align: left;
+  margin-left: 100px;
+}
+table {
+  margin: 25px;
+  text-align: left;
+}
+.Info td {
+  margin: 50px;
+  padding: 15px;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  background-color: #F4F4F4;
+  justify-content: space-between;
+}
+
+.Header ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.Header li {
+  margin-right: 20px;
+}
+
+.Header input {
+  margin-left: -100px;
+}
+.Header img {
+  border-radius: 5px;
+}
+h3 {
+  margin-right: 25%;
+  border-bottom: 2px solid gray;
+}
+.contributions h1 {
+  border-bottom: 2px solid gray;
+  font-size: 5em;
+  margin-left: 50px;
+}
+
+.contributions img {
+  margin-left: 100px;
 }

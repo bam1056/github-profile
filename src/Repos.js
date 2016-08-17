@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import 'whatwg-fetch'
 import './index.css'
 
-class Followers extends Component {
+class Repos extends Component {
 
   constructor () {
     super()
     this.state = {
-      followers: []
+      repos: []
     }
   }
 
@@ -18,23 +18,26 @@ class Followers extends Component {
           return resp.json()
         })
         .then((data) => {
-          this.setState({ followers: data })
+          this.setState({ repos: data })
         })
     }
   }
 
   render () {
-    const followers = this.state.followers.map((follower) => {
-      return <li key={follower.id}><a href={follower.html_url}>{follower.login}</a></li>
+    const repos = this.state.repos.map((repo, index) => {
+      return <li key={index}>
+        <a href={repo.html_url}>{repo.name}</a>
+        <p>Last Updated: {repo.updated_at}</p>
+      </li>
     })
 
-    return <div className='Followers'>
-        <h3>My Followers</h3>
-        <ul className='Followers'>
-          {followers}
-        </ul>
+    return <div className='RepoList'>
+      <h3>My Repos</h3>
+      <ul className='Repos'>
+        {repos}
+      </ul>
     </div>
   }
 }
 
-export default Followers
+export default Repos
