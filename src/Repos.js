@@ -24,6 +24,7 @@ class Repos extends Component {
   }
 
   render () {
+    console.log(this.state.repos)
     const repos = this.state.repos.map((repo, index) => {
       return <li key={index}>
         <a href={repo.html_url}>{repo.name}</a>
